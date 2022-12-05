@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=3.0"
+    />
+    <title>SONY</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="images/head_favicon.webp"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style type="text/css"></style>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.js"
+    ></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    ></script>
+    <!-- Link Swiper's CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!--swiper-->
+    <!--비교적 쉬움 구글링 하면 디자인 수정법도 적혀있음 확인할 것-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style media="screen"></style>
+    <!--main-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <!--JS Code for smooth scrolling -->
+  <script>
+    $(document).ready(function () {
+      $("a").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            2000,
+            function () {
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
+    });
+  </script>
+
+  <!--dark mode-->
+  <script>
+    function bodyColor(color) {
+      document.querySelector("body").style.color = color;
+    }
+    function bodybgcolor(color) {
+      document.querySelector("body").style.backgroundColor = color;
+    }
+    function navColor(color) {
+      var alist = document.querySelectorAll("a");
+      for (var i = 0; i < alist.length; i++) alist[i].style.color = color;
+
+      var foolist = document.querySelectorAll(".footer02 li");
+      for (var j = 0; j < foolist.length; j++) foolist[j].style.color = color;
+    }
+    function navbgColor(color) {
+      document.querySelector("nav").style.backgroundColor = color;
+      document.querySelector("footer").style.backgroundColor = color;
+    }
+    function burgerColor(color) {
+      document.querySelector(".line1").style.backgroundColor = color;
+      document.querySelector(".line2").style.backgroundColor = color;
+      document.querySelector(".line3").style.backgroundColor = color;
+    }
+    function navList(color) {
+      document.querySelector(".nav-links").style.backgroundColor = color;
+    }
+    function h2Color(color) {
+      document.querySelector("h2").style.color = color;
+    }
+    function contentbgColor(color) {
+      document.querySelector(".review").style.backgroundColor = color;
+      document.querySelector(".news-letter").style.backgroundColor = color;
+      document.querySelector(".lista1").style.backgroundColor = color;
+      document.querySelector(".lista2").style.backgroundColor = color;
+      document.querySelector(".lista3").style.backgroundColor = color;
+      document.querySelector(".lista4").style.backgroundColor = color;
+      document.querySelector(".lista5").style.backgroundColor = color;
+    }
+    function logoFilter(filter) {
+      document.querySelector(".logo_img").style.filter = filter;
+      document.querySelector(".footer_logo").style.filter = filter;
+    }
+    function inquirybgColor(color) {
+      document.querySelector(".inquiry").style.backgroundColor = color;
+    }
+    function addressbgColor(color) {
+      document.querySelector("address").style.backgroundColor = color;
+    }
+    function tablebgColor(color) {
+      var tdlist = document.querySelectorAll("td");
+      for (var i = 0; i < tdlist.length; i++)
+        tdlist[i].style.backgroundColor = color;
+    }
+    function formColor(color) {
+      var formlist = document.querySelectorAll("input");
+      for (var i = 0; i < formlist.length; i++) formlist[i].style.color = color;
+      document.querySelector("textarea").style.color = color;
+      document.querySelector(".select").style.color = color;
+    }
+    function optionbgColor(color) {
+      var oplist = document.querySelectorAll("option");
+      for (var i = 0; i < oplist.length; i++)
+        oplist[i].style.backgroundColor = color;
+    }
+    function btnbgColor(color) {
+      document.querySelector(".subscribe").style.backgroundColor = color;
+    }
+    function addressFilter(filter) {
+      var imglist = document.querySelectorAll("address img");
+      for (var i = 0; i < imglist.length; i++) imglist[i].style.filter = filter;
+    }
+
+    // 주간, 야간모드
+    function day_night_handler(self) {
+      var target = document.querySelector("body");
+      if (self.value == "다크 모드") {
+        bodyColor("#ffffff");
+        bodybgcolor("#1e1f21");
+        navColor("#ffffff");
+        navbgColor("#292a2d");
+        burgerColor("#ffffff");
+        navList("#292a2d");
+        contentbgColor("#2c2d30");
+        logoFilter("invert(100%)");
+        inquirybgColor("#333333");
+        addressbgColor("#1e1f21");
+        tablebgColor("#1e1f21");
+        formColor("#ffffff");
+        optionbgColor("#000000");
+        btnbgColor("#666666");
+        addressFilter("grayscale(50%)");
+        self.value = "라이트 모드";
+      } else {
+        bodyColor("#555555");
+        bodybgcolor("#ffffff");
+        navColor("#555555");
+        navbgColor("#ffffff");
+        burgerColor("#222222");
+        navList("rgba(255, 255, 255, 0.8)");
+        contentbgColor("#f6f6f6");
+        h2Color("333333");
+        logoFilter("invert(0%)");
+        inquirybgColor("#f8f8f9");
+        addressbgColor("#f3f3f3");
+        tablebgColor("#ffffff");
+        formColor("#000000");
+        optionbgColor("#ffffff");
+        btnbgColor("transparent");
+        addressFilter("grayscale(100%)");
+        self.value = "다크 모드";
+      }
+    }
+  </script>
+
+  <body>
+    <nav id="home" class="space-betweens align-centers paddings">
+      <h1 class="logo">
+        <a href="#"
+          ><img class="logo_img" alt="sony" src="images/nav_logo.png"
+        /></a>
+      </h1>
+      <ul class="nav-links">
+        <li><a href="/index.html">홈으로</a></li>
+        <li><a href="/register.html">회원가입</a></li>
+        <li><a href="/login.html">로그인</a></li>
+        <li><a href="/remove.html">회원탈퇴</a></li>
+        <li><a href="/wishlist.html">장바구니</a></li>
+        <li><a href="/purchase_linkbudss.html">구매페이지</a></li>
+        <li><a href="/faq.html">고객센터</a></li>
+        <li>
+          <label class="cbox">
+            <input
+              type="checkbox"
+              value="다크 모드"
+              onclick="day_night_handler(this)"
+            />
+            <span id="mySpan" class="slide round"></span>
+          </label>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <script>
+      const navSlide = () => {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-links");
+        const navLinks = document.querySelectorAll(".nav-links li");
+
+        burger.addEventListener("click", () => {
+          // Toggle Nav
+          nav.classList.toggle("nav-active");
+
+          //Animate Links
+          navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+              link.style.animation = "";
+            } else {
+              link.style.animation = `navLinkFade 0.5s ease forwards ${
+                index / 7 + 0.5
+              }s`;
+            }
+          });
+          //Burger Animation
+          burger.classList.toggle("toggle");
+        });
+      };
+
+      navSlide();
+    </script>
+
+    <main>
+      <div class="swiper mainSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/index_main1.jpg" />
+            <div>
+              <h1
+                class="fade-text"
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              >
+                일상을 콘텐츠로
+              </h1>
+
+              <br />
+              <h1
+                class="fade-text"
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1500"
+              >
+                zv-e10
+              </h1>
+
+              <br />
+              <p
+                class="fade-text"
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                누구나 쉽고 편리하게<br />
+                데일리 소니 브이로그 카메라
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/index_main2.jpg" />
+            <div>
+              <h1
+                class="fade-text"
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              >
+                셀피 촬영의 즐거움
+              </h1>
+
+              <br />
+              <h1
+                class="fade-text"
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1500"
+              >
+                zv-1f
+              </h1>
+
+              <br />
+              <p
+                class="fade-text"
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                셀피 촬영에 최적화된<br />
+                초광각 20mm F2.0 단렌즈
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/index_main3.jfif" />
+            <div>
+              <h1
+                class="fade-text"
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              >
+                벗지 않는 편안함
+              </h1>
+
+              <br />
+              <h1
+                class="fade-text"
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1500"
+              >
+                Linkbuds
+              </h1>
+
+              <br />
+              <p
+                class="fade-text"
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                풍성하고 생생한<br />
+                고품질의 사운드 경험
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        //메인 슬라이드
+        var swiper = new Swiper(".mainSwiper", {
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true,
+          },
+          speed: 1500,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+          on: {
+            slideChangeTransitionStart: function () {
+              $(".fade-text")
+                .removeClass("aos-init")
+                .removeClass("aos-animate");
+            },
+            slideChangeTransitionEnd: function () {
+              $(".fade-text").show(0);
+
+              AOS.init();
+            },
+          },
+        });
+
+        AOS.init();
+      </script>
+    </main>
+
+    <aside class="quickmenu" id="quickmenu">
+      <div class="none">
+        <div class="rights">
+          <span class="material-symbols-outlined" onclick="closeMenu()">
+            close
+          </span>
+        </div>
+        <ul>
+          <li><a href="#home">맨 위로</a></li>
+          <li><a href="#best">베스트</a></li>
+          <li><a href="#event">이벤트</a></li>
+          <li><a href="#product">신제품</a></li>
+          <li><a href="#review">후기</a></li>
+          <li><a href="#news">뉴스</a></li>
+          <li><a href="#quiry">문의/구독</a></li>
+          <li>
+            <input
+              class="dark_mode"
+              type="button"
+              value="다크 모드"
+              onclick="day_night_handler(this)"
+            />
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <script>
+      $(document).ready(function () {
+        var currentPosition = parseInt($(".quickmenu").css("top"));
+        $(window).scroll(function () {
+          var position = $(window).scrollTop();
+          $(".quickmenu")
+            .stop()
+            .animate({ top: position + currentPosition + "px" }, 1000);
+        });
+      });
+      function closeMenu() {
+        // 토글 할 버튼 선택 (quickmenu)
+        const quickmenu = document.getElementById("quickmenu");
+
+        // quickmenu 숨기기 (display: none)
+        if (quickmenu.style.display !== "none") {
+          quickmenu.style.display = "none";
+        }
+        // btn` 보이기 (display: block)
+        else {
+          quickmenu.style.display = "block";
+        }
+      }
+    </script>
+
+    <article id="best" class="best" style="padding-top: 100px">
+      <div>
+        <!--text area-->
+        <div class="text-area">
+          <div>
+            <h1>sony best</h1>
+            <div
+              data-aos="fade-down"
+              class="first-div"
+              onclick="location.href='purchase_linkbudss.html'"
+            >
+              <div>
+                <h2 class="centers">LinkBuds S</h2>
+                <p>편안하게 몰입하다, <br />링크버즈 S</p>
+              </div>
+            </div>
+          </div>
+          <div
+            data-aos="fade-right"
+            class="second-div"
+            onclick="location.href='purchase_sel2470gm2.html'"
+          >
+            <div>
+              <h2 class="centers">SEL2470GM2</h2>
+              <p>미래형 렌즈의 완성</p>
+            </div>
+          </div>
+        </div>
+        <!--photo area-->
+        <div class="photo-area">
+          <div
+            data-aos="fade-left"
+            class="third-div"
+            onclick="location.href='purchase_ilce7m4.html'"
+          >
+            <div>
+              <h2 class="centers">ILCE-7M4</h2>
+              <p>
+                새로운 바디, <br />
+                최신의 센서 기술
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="event" id="event" style="margin: 150px 0">
+      <h1>event</h1>
+      <!-- Swiper -->
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h3>혜택존</h3>
+            <img src="images/index_event1.jpg" />
+            <div>
+              <h2>링크버즈 시리즈 펌웨어 업데이트 기념 이벤트</h2>
+              <p>2022-11-17 ~ 2022-12-04</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h3>혜택존</h3>
+            <img src="images/index_event2.jpg" />
+            <div>
+              <h2>수고한 수험생에게 마음을 전하세요.</h2>
+              <p>2022-11-07 ~ 2022-11-27</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h3>소니스토어 단독</h3>
+            <img src="images/index_event3.jpg" />
+            <div>
+              <h2>들어보고! 할인받고!</h2>
+              <p>2022-11-01 ~ 2022-12-31</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h3>혜택존</h3>
+            <img src="images/index_event4.jpg" />
+            <div>
+              <h2>수능끝. 혜택시작!</h2>
+              <p>2022-11-17 ~ 2022-11-30</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h3>소니스토어 단독</h3>
+            <img src="images/index_event5.jpg" />
+            <div>
+              <h2>하나뿐인 지구를 닮은 <br />링크버즈 S 어스블루</h2>
+              <p>2022-11-15 ~ 2022-11-30</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h3>혜택존</h3>
+            <img src="images/index_event6.jpg" />
+            <div>
+              <h2>초겨울, R 시리즈 PGYTECH 아웃도어 장갑 증정</h2>
+              <p>2022-10-26 ~ 2022-11-30</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h3>정품등록 이벤트</h3>
+            <img src="images/index_event7.jpg" />
+            <div>
+              <h2>
+                가을, 풍경을 담다<br />
+                렌즈 정품등록 이벤트
+              </h2>
+              <p>2022-09-23 ~ 2022-11-23</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h3>소니스토어 단독</h3>
+            <img src="images/index_event8.jpg" />
+            <div>
+              <h2>A7 IV 트리니티 패키지</h2>
+              <p>2022-11-15 ~ 2022-12-31</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <h3>정품등록 이벤트</h3>
+            <img src="images/index_event9.jpg" />
+            <div>
+              <h2>완벽한 몰입을 경험하다 <br />인존 H9 정품등록 이벤트</h2>
+              <p>2022-09-28 ~ 2022-11-30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper2", {
+          slidesPerView: 1, //초기값 설정 모바일값이 먼저!!
+          spaceBetween: 10,
+          slidesPerGroup: 1,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          autoplay: {
+            delay: 2500,
+          },
+          speed: 1500,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2, //브라우저가 768보다 클 때
+              spaceBetween: 40,
+              slidesPerGroup: 2,
+            },
+            1366: {
+              slidesPerView: 3, //브라우저가 1024보다 클 때
+              spaceBetween: 50,
+              slidesPerGroup: 3,
+            },
+          },
+        });
+      </script>
+    </article>
+
+    <article id="product" class="product">
+      <h1>new product</h1>
+      <div class="content-box" id="content-box">
+        <div>
+          <div class="swiper mySwiper3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="images/index_newecru.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/index_newwhite.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/index_newblue.png" alt="" />
+              </div>
+            </div>
+            <div class="shadow"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="main-text">
+            <h2 class="lefts">신제품</h2>
+            <h1 class="lefts">편안하게 몰입하다, <br />링크버즈 S</h1>
+            <div>
+              <section id="swtext1">
+                <p>감각적인 에크루</p>
+                <p>￦249,000</p>
+              </section>
+              <section id="swtext2">
+                <p>세련된 화이트</p>
+                <p>￦249,000</p>
+              </section>
+              <section id="swtext3">
+                <p>지구를 닮은 어스 블루</p>
+                <p>￦249,000</p>
+              </section>
+            </div>
+            <div
+              onclick="location.href='linkbudsS.html'"
+              class="black-btn centers"
+            >
+              BUY NOW
+            </div>
+          </div>
+        </div>
+        <script>
+          var swiper = new Swiper(".mySwiper3", {
+            on: {
+              slideChangeTransitionEnd: function () {
+                if (this.realIndex == 0) {
+                  document.getElementById("swtext1").style.display = "block";
+                  document.getElementById("swtext2").style.display = "none";
+                  document.getElementById("swtext3").style.display = "none";
+                  document.getElementById("content-box").style.backgroundColor =
+                    "#cbb8a9";
+                }
+                if (this.realIndex == 1) {
+                  document.getElementById("swtext1").style.display = "none";
+                  document.getElementById("swtext2").style.display = "block";
+                  document.getElementById("swtext3").style.display = "none";
+                  document.getElementById("content-box").style.backgroundColor =
+                    "#aed9ae";
+                }
+                if (this.realIndex == 2) {
+                  document.getElementById("swtext1").style.display = "none";
+                  document.getElementById("swtext2").style.display = "none";
+                  document.getElementById("swtext3").style.display = "block";
+                  document.getElementById("content-box").style.backgroundColor =
+                    "#a5a8d5";
+                }
+              },
+            },
+            slidesPerView: 1,
+            spaceBetween: 1,
+            loop: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        </script>
+      </div>
+    </article>
+
+    <article id="review" class="review" style="padding: 100px 0">
+      <h1>review</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="photo-area">
+              <img src="images/index_review1.jpg" />
+              <h4>LinkBuds S</h4>
+            </div>
+            <div class="text-area">
+              <h2>
+                <strong style="color: #5865f5; font-size: 5rem">“</strong>
+                <br />아담한 사이즈와 가벼운 무게, <br />특히 부드럽고 말랑한
+                실리콘 팁은 정말 유용합니다.
+              </h2>
+              <p>cgbe****님의 링크 버즈 S 사용후기</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="photo-area">
+              <img src="images/index_review2.jpg" />
+              <h4>LSPX-S3</h4>
+            </div>
+            <div class="text-area">
+              <h2>
+                <strong style="color: #5865f5; font-size: 5rem">“</strong
+                ><br />캠핑 랜턴처럼 생긴 디자인에 기본 충전 케이블도<br />페브릭으로
+                되어있어서 감성적인 느낌 충만하네요.
+              </h2>
+              <p>hell****님의 LSPX-S3 사용후기</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="photo-area">
+              <img src="images/index_review3.png" />
+              <h4>WH1000XM5</h4>
+            </div>
+            <div class="text-area">
+              <h2>
+                <strong style="color: #5865f5; font-size: 5rem">“</strong
+                ><br />친환경 소재라고 들었는데 <br />직접 받아 보니까 가볍고
+                부드러워요.
+              </h2>
+              <p>zhz****님의 WH1000XM5 사용후기</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <script>
+        var swiperproduct = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          autoplay: {
+            delay: 5500,
+          },
+          speed: 3500,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 1.1, //브라우저가 768보다 클 때
+            },
+            1366: {
+              slidesPerView: 1.3, //브라우저가 1024보다 클 때
+            },
+          },
+        });
+      </script>
+    </article>
+
+    <article id="news" class="news">
+      <h1>news</h1>
+      <p>소니의 새로운 소식들</p>
+      <ul class="list">
+        <li class="listq paddings">
+          <div>No.24</div>
+          <strong>소니코리아 개인정보처리방침 개정 안내</strong>
+          <div>2022.11.21</div>
+        </li>
+        <div class="lista1 lista paddings">
+          <p>
+            서비스를 이용해 주시는 이용자 여러분께 감사드리며, 새로운 개인정보
+            처리방침 적용에 관한 안내 말씀드립니다. <br />
+            회사는 이용자 여러분의 개인정보를 무엇보다 소중하게 처리하고 있으며,
+            어떤 사안보다도 우선하여 안전하게 관리하고 있습니다. 새롭게 변경될
+            개인정보 처리방침 내용을 확인하시고 서비스 이용에 참고하시기
+            바랍니다.
+          </p>
+        </div>
+        <li class="listq paddings">
+          <div>No.23</div>
+          <strong
+            >[당첨자 발표] 벗지 않는 편안함 링크버즈 시리즈 체험단 모집</strong
+          >
+          <div>2022.08.11</div>
+        </li>
+        <div class="lista2 lista paddings">
+          <table>
+            <colgroup>
+              <col style="width: 50%" />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">성명(휴대폰 뒷자리)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>강민*(2385)</td>
+                <td>신옥*(0328)</td>
+              </tr>
+              <tr>
+                <td>강선*(1799)</td>
+                <td>안세*(6245)</td>
+              </tr>
+              <tr>
+                <td>강소*(3120)</td>
+                <td>안인*(0387)</td>
+              </tr>
+              <tr>
+                <td>곽지*(9526)</td>
+                <td>유설*(8142)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <li class="listq paddings">
+          <div>No.22</div>
+          <strong>소니스토어 압구정 임시 휴무 안내</strong>
+          <div>2022.06.29</div>
+        </li>
+        <div class="lista3 lista paddings">
+          <p>
+            항상 소니스토어를 사랑해 주시는 고객님께 깊은 감사의 말씀을
+            드립니다. 전기 설비 공사로 인한 임시 휴무 공지 드립니다. 소니스토어
+            압구정 방문 시 아래 일정을 참고하여 주시기 바랍니다.
+          </p>
+        </div>
+        <li class="listq paddings">
+          <div>No.21</div>
+          <strong>소니스토어 온라인 배송 일정 안내</strong>
+          <div>2022.05.11</div>
+        </li>
+        <div class="lista4 lista paddings">
+          <p>
+            항상 소니스토어를 사랑해 주시는 고객님께 깊은 감사의 말씀을
+            드립니다.
+            <br />
+            소니코리아 휴무로 인한 배송기간 변경 공지 드립니다.
+          </p>
+          <ul>
+            <li>
+              <strong
+                >2022. 5. 12(수) 오후 12시 까지 주문 건 : 당일 발송</strong
+              >
+            </li>
+            <li>
+              <strong
+                >2022. 5. 12(수) 오후 12시 이후 주문 건 : 2022. 1. 3(월)부터
+                순차 발송</strong
+              >
+            </li>
+          </ul>
+        </div>
+        <li class="listq paddings">
+          <div>No.20</div>
+          <strong
+            >[당첨자 발표]소니스토어 리뉴얼 기념 구매자 대상 첫! 구매 이벤트
+            당첨자 발표</strong
+          >
+          <div>2022.02.08</div>
+        </li>
+        <div class="lista5 lista paddings">
+          <h3 class="centers">ZV-1(화이트)</h3>
+          <table>
+            <colgroup>
+              <col style="width: 50%" />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">성명(휴대폰 뒷자리)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>고홍*(1149)</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="centers">WF-1000XM4</h3>
+          <table>
+            <colgroup>
+              <col style="width: 50%" />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">성명(휴대폰 뒷자리)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>김경*(4652)</td>
+              </tr>
+              <tr>
+                <td>김수*(4883)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </ul>
+      <script>
+        window.addEventListener("load", function () {
+          const List = document.querySelectorAll(".list > li");
+          for (let i = 0; i < List.length; i++) {
+            List[i].addEventListener("click", function () {
+              var panel = this.nextElementSibling;
+              //클래스가 있을때와 없을때를 구분
+              if (panel.classList.contains("list-see")) {
+                panel.classList.remove("list-see");
+                this.classList.remove("befores");
+                panel.style.maxHeight = null;
+              } else {
+                clearlist();
+                panel.classList.add("list-see");
+                this.classList.add("befores");
+                panel.style.maxHeight = panel.scrollHeight + "px";
+              }
+            });
+          }
+
+          function clearlist() {
+            for (let i = 0; i < List.length; i++) {
+              var panel = List[i].nextElementSibling;
+              panel.classList.remove("list-see");
+              List[i].classList.remove("befores");
+              panel.style.maxHeight = null;
+            }
+          }
+        });
+      </script>
+    </article>
+
+    <article class="quiry" id="quiry">
+      <section class="inquiry" style="padding: 55px 5%">
+        <h1>1:1 문의</h1>
+        <div class="inputBox flexs align-centers">
+          <p class="tit">이름<span>*</span></p>
+          <input
+            type="text"
+            id="name"
+            name="v_name"
+            maxlength="30"
+            class="i_box"
+          /><span class="i_focus"></span>
+        </div>
+        <div class="inputBox">
+          <p class="tit">문의 유형</p>
+          <select name="v_nation" class="select">
+            <option value="1">주문/결제</option>
+            <option value="2">배송</option>
+            <option value="3">취소/환불</option>
+            <option value="4">기타</option>
+          </select>
+        </div>
+        <div class="inputBox">
+          <p class="tit">이메일<span>*</span></p>
+          <input
+            type="text"
+            id="email"
+            name="v_email"
+            maxlength="50"
+            class="i_box"
+          /><span class="i_focus"></span>
+        </div>
+        <div class="textarea">
+          <p class="tit">문의 내용<span>*</span></p>
+          <textarea
+            id="test"
+            class="i_box"
+            name="test"
+            maxlength="2000"
+            placeholder="문의 내용을 입력해 주세요. (2000자 이내)"
+          ></textarea
+          ><span class="i_focus"></span>
+        </div>
+        <div id="test_cnt">(0 / 2000)</div>
+        <script>
+          $(document).ready(function () {
+            $("#test").on("keyup", function () {
+              $("#test_cnt").html("(" + $(this).val().length + " / 2000)");
+              if ($(this).val().length > 2000) {
+                $(this).val($(this).val().substring(0, 2000));
+                $("#test_cnt").html("(2000 / 2000)");
+              }
+            });
+          });
+        </script>
+        <div class="formBox">
+          <div class="flexs">
+            <div class="checkBox">
+              <input type="checkbox" id="agreeCheck" />
+              <label for="agreeCheck"></label>
+            </div>
+            <p>개인 정보의 수집 및 사용에 동의해야 합니다.</p>
+          </div>
+          <a id="moreBtn" style="text-decoration: underline; cursor: pointer"
+            >약관 보기</a
+          >
+
+          <div id="moreModal" class="modal">
+            <div class="modal-content">
+              <div class="space-betweens">
+                <h3>개인 정보의 수집 및 사용</h3>
+                <span class="close">&times;</span>
+              </div>
+              <ul>
+                <li>
+                  <h4>개인정보의 수집</h4>
+                  <ol>
+                    <li>
+                      ① Sony Store는 이용자의 정보수집시 개인정보취급방침에
+                      기재되어 있는 필요한 최소한의 정보를 수집합니다.
+                    </li>
+                    <li>
+                      ② Sony Store가 이용자의 개인식별이 가능한 개인정보를
+                      수집하는 때에는 반드시 당해 이용자의 동의를 받습니다.
+                    </li>
+                    <li>
+                      ③ 이용자는 본 약관에 동의함으로 당사의 개인정보 수집
+                      요청에 응한 것으로 간주됩니다.
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h4>개인정보관리책임자 등</h4>
+                  <ol>
+                    <li>
+                      ① Sony Store는 개인정보보호를 위해 관리자를 한정하며 그
+                      수를 최소화하며 신용카드, 은행계좌등을 포함한 이용자의
+                      개인정보의 분실, 도난, 유출, 변조등으로 인한 이용자의
+                      손해에 대하여 모든 책임을 집니다.
+                    </li>
+                    <li>
+                      ② Sony Store의 개인정보보호에 관한 보다 자세한 내용은 Sony
+                      Store 개인정보보호정책을 참고하시기 바랍니다. 개인정보와
+                      관련된 문의사항은 개인정보관리책임자 및 담당자에게
+                      요청하시기 바랍니다.
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <script>
+            var modal = document.getElementById("moreModal");
+            var btn = document.getElementById("moreBtn");
+            var span = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function () {
+              modal.style.display = "block";
+            };
+            span.onclick = function () {
+              modal.style.display = "none";
+            };
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            };
+          </script>
+        </div>
+        <button
+          class="blue-btn"
+          style="margin-top: 40px"
+          onclick="check1()"
+          value="confirm"
+        >
+          문의 하기
+        </button>
+        <script>
+          function check1() {
+            var chk1 = document.getElementById("agreeCheck").checked;
+            if (document.getElementById("name").value == "") {
+              alert("이름을 입력해 주세요.");
+              return;
+            }
+            if (document.getElementById("name").value.length < 2) {
+              alert("이름 제대로 입력 하세요.");
+              return;
+            }
+            if (document.getElementById("email").value == "") {
+              alert("이메일을 입력해 주세요.");
+              return;
+            }
+            if (!CheckEmail(document.getElementById("email").value)) {
+              alert("이메일 형식이 잘못되었습니다.");
+              obEmail.focus();
+              return;
+            }
+            if (document.getElementById("test").value == "") {
+              alert("문의 내용을 입력해 주세요.");
+              return;
+            }
+            if (!chk1) {
+              alert("약관 동의 후 문의 가능 합니다.");
+              return false;
+            } else {
+              alert("서버에 성공적으로 전송되었습니다.");
+              location.reload();
+            }
+            frm.submit(); //직접 submit()이라는 메소드를 호출. 액션을 들고 가줌
+          }
+
+          function CheckEmail(str) {
+            var reg_email =
+              /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+            if (!reg_email.test(str)) {
+              return false;
+            } else {
+              return true;
+            }
+          }
+        </script>
+      </section>
+      <section
+        class="news-letter"
+        style="background: #f3f3f3; padding: 55px 5%"
+      >
+        <h1 style="margin: 0">뉴스레터</h1>
+        <p class="bolds" style="margin: 50px 0">
+          뉴스레터를 구독해 소니의 새로운 소식들을 메일로 받아보세요.
+        </p>
+        <div class="inputBox">
+          <p class="tit">이름<span>*</span></p>
+          <input
+            type="text"
+            id="s_name"
+            name="v_name"
+            maxlength="30"
+            class="i_box"
+          /><span class="i_focus"></span>
+        </div>
+        <div class="inputBox">
+          <p class="tit">이메일<span>*</span></p>
+          <input
+            type="text"
+            id="s_email"
+            name="v_email"
+            maxlength="50"
+            class="i_box"
+          /><span class="i_focus"></span>
+        </div>
+        <div class="formBox">
+          <div class="flexs">
+            <div class="checkBox">
+              <input type="checkbox" id="agreeCheck2" />
+              <label for="agreeCheck2"></label>
+            </div>
+            <p>개인 정보의 수집 및 사용에 동의해야 합니다.</p>
+          </div>
+          <a id="moreBtn2" style="text-decoration: underline; cursor: pointer"
+            >약관 보기</a
+          >
+
+          <div id="moreModal2" class="modal">
+            <div class="modal-content">
+              <div class="space-betweens">
+                <h3>개인 정보의 수집 및 사용</h3>
+                <span class="close2">&times;</span>
+              </div>
+              <ul>
+                <li>
+                  <h4>개인정보의 수집</h4>
+                  <ol>
+                    <li>
+                      ① Sony Store는 이용자의 정보수집시 개인정보취급방침에
+                      기재되어 있는 필요한 최소한의 정보를 수집합니다.
+                    </li>
+                    <li>
+                      ② Sony Store가 이용자의 개인식별이 가능한 개인정보를
+                      수집하는 때에는 반드시 당해 이용자의 동의를 받습니다.
+                    </li>
+                    <li>
+                      ③ 이용자는 본 약관에 동의함으로 당사의 개인정보 수집
+                      요청에 응한 것으로 간주됩니다.
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <h4>개인정보관리책임자 등</h4>
+                  <ol>
+                    <li>
+                      ① Sony Store는 개인정보보호를 위해 관리자를 한정하며 그
+                      수를 최소화하며 신용카드, 은행계좌등을 포함한 이용자의
+                      개인정보의 분실, 도난, 유출, 변조등으로 인한 이용자의
+                      손해에 대하여 모든 책임을 집니다.
+                    </li>
+                    <li>
+                      ② Sony Store의 개인정보보호에 관한 보다 자세한 내용은 Sony
+                      Store 개인정보보호정책을 참고하시기 바랍니다. 개인정보와
+                      관련된 문의사항은 개인정보관리책임자 및 담당자에게
+                      요청하시기 바랍니다.
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <script>
+            var modal = document.getElementById("moreModal2");
+            var btn = document.getElementById("moreBtn2");
+            var span = document.getElementsByClassName("close2")[0];
+
+            btn.onclick = function () {
+              modal.style.display = "block";
+            };
+            span.onclick = function () {
+              modal.style.display = "none";
+            };
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            };
+          </script>
+        </div>
+        <button
+          class="blue-btn subscribe"
+          style="
+            margin-top: 40px;
+            border: 1px solid black;
+            background: transparent;
+            color: black;
+          "
+          onclick="check()"
+          value="confirm"
+        >
+          구독 하기
+        </button>
+        <script>
+          function check() {
+            var chk2 = document.getElementById("agreeCheck2").checked;
+            if (document.getElementById("s_name").value == "") {
+              alert("이름을 입력해 주세요.");
+              return;
+            }
+            if (document.getElementById("s_name").value.length < 2) {
+              alert("이름을 제대로 입력 하세요.");
+              return;
+            }
+            if (document.getElementById("s_email").value == "") {
+              alert("이메일을 입력해 주세요.");
+              return;
+            }
+            if (!CheckEmail(document.getElementById("s_email").value)) {
+              alert("이메일 형식이 잘못되었습니다.");
+              obEmail.focus();
+              return;
+            }
+            if (!chk2) {
+              alert("약관 동의 후 구독 가능 합니다.");
+              return false;
+            } else {
+              alert(
+                "뉴스레터 구독이 완료되었습니다.\n이제부터 소니의 새로운 소식들을 메일로 받아보실 수 있습니다."
+              );
+              location.reload();
+            }
+            frm.submit();
+          }
+
+          function CheckEmail(str) {
+            var reg_email =
+              /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+            if (!reg_email.test(str)) {
+              return false;
+            } else {
+              return true;
+            }
+          }
+        </script>
+      </section>
+    </article>
+
+    <footer id="footer">
+      <div class="align-centers">
+        <!--logo area-->
+        <div><img class="none footer_logo" src="images/footer_sony.svg" /></div>
+        <!--text area-->
+        <div style="border-top: 1px solid #ccc">
+          <div class="text-area paddings">
+            <ul class="footer01">
+              <li class="list_tit">고객지원</li>
+              <ul>
+                <div>
+                  <li><span>소니코리아 고객지원</span></li>
+                  <li><span>소니스토어 고객지원</span></li>
+                  <li><span>프로페셔널 제품 지원 및 서비스</span></li>
+                  <li><span>소니 대외사업부</span></li>
+                  <li><span>매장찾기</span></li>
+                  <li><span>직영점 안내</span></li>
+                </div>
+              </ul>
+              <li class="list_tit">제품정보</li>
+              <ul>
+                <div>
+                  <li><span>소비자 가전</span></li>
+                  <li><span>프로페셔널 제품 및 솔루션</span></li>
+                  <li><span>전자부품</span></li>
+                </div>
+              </ul>
+              <li class="list_tit">뉴스 및 정보</li>
+              <ul>
+                <div>
+                  <li><span>뉴스/보도자료</span></li>
+                  <li><span>Investor Relations</span></li>
+                </div>
+              </ul>
+            </ul>
+            <script>
+              // 메뉴 링크 열기
+              window.addEventListener("load", function () {
+                const List = document.querySelectorAll(".footer01 > li");
+                for (let i = 0; i < List.length; i++) {
+                  List[i].addEventListener("click", function () {
+                    const panel = this.nextElementSibling;
+                    if (panel.classList.contains("active")) {
+                      panel.classList.remove("active");
+                      this.classList.remove("active");
+                      panel.style.maxHeight = null;
+                    } else {
+                      clearlist();
+                      panel.classList.add("active");
+                      this.classList.add("active");
+                      panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                  });
+                }
+
+                function clearlist() {
+                  for (let i = 0; i < List.length; i++) {
+                    const panel = List[i].nextElementSibling;
+                    panel.classList.remove("active");
+                    List[i].classList.remove("active");
+                    panel.style.maxHeight = null;
+                  }
+                }
+              });
+            </script>
+            <ul class="footer01_pc none">
+              <div class="flexs">
+                <li>
+                  <span class="bolds">고객지원</span>
+                  <ul>
+                    <li><span>소니코리아 고객지원</span></li>
+                    <li><span>소니스토어 고객지원</span></li>
+                    <li><span>프로페셔널 제품 지원 및 서비스</span></li>
+                    <li><span>소니 대외사업부</span></li>
+                    <li><span>매장찾기</span></li>
+                    <li><span>직영점 안내</span></li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="bolds">제품정보</span>
+                  <ul>
+                    <li><span>소비자 가전</span></li>
+                    <li><span>프로페셔널 제품 및 솔루션</span></li>
+                    <li><span>전자부품</span></li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="bolds">뉴스 및 정보</span>
+                  <ul>
+                    <li><span>뉴스/보도자료</span></li>
+                    <li><span>Investor Relations</span></li>
+                  </ul>
+                </li>
+              </div>
+              <hr />
+            </ul>
+            <ul class="footer02 space-betweens">
+              <li class="bolds">개인정보처리방침</li>
+              <li>이용약관</li>
+              <li class="none">사이트맵</li>
+              <li class="none">회사소개</li>
+              <li>환경경영</li>
+              <li class="none">사회공헌</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--subsidiary area-->
+    <address>
+      <div>
+        <div class="address01 paddings space-betweens align-centers">
+          <div>
+            <img title="SONY GROUP" src="images/address_sonygroup.png" />
+          </div>
+          <div>
+            <img title="PLAYSTATION" src="images/address_playstation.png" />
+          </div>
+          <div>
+            <img title="SONY MUSIC" src="images/address_sonymusic.png" />
+          </div>
+        </div>
+
+        <div class="address02 paddings space-betweens align-centers">
+          <div>
+            <img title="SONY PICTURES" src="images/address_pictures.png" />
+          </div>
+          <div>
+            <img title="SONY ENT" src="images/address_sonyent.png" />
+          </div>
+          <div>
+            <img title="ANIPLEX" src="images/address_aniplex.png" />
+          </div>
+        </div>
+      </div>
+    </address>
+  </body>
+</html>
