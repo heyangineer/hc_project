@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=3.0"
+    />
+    <title>SONY</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="images/head_favicon.webp"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style type="text/css"></style>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.js"
+    ></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+
+    <style media="screen"></style>
+  </head>
+
+  <body>
+    <nav id="home" class="space-betweens align-centers paddings">
+      <h1 class="logo">
+        <a href="/index.html"><img alt="sony" src="images/nav_logo.png" /></a>
+      </h1>
+      <ul class="nav-links">
+        <li><a href="/index.html">홈으로</a></li>
+        <li><a href="/register.html">회원가입</a></li>
+        <li><a href="/login.html">로그인</a></li>
+        <li><a href="/remove.html">회원탈퇴</a></li>
+        <li><a href="/wishlist.html">장바구니</a></li>
+        <li><a href="/purchase_linkbudss.html">구매페이지</a></li>
+        <li><a href="/faq.html" style="color: #5865f5">고객센터</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <script>
+      const navSlide = () => {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-links");
+        const navLinks = document.querySelectorAll(".nav-links li");
+
+        burger.addEventListener("click", () => {
+          // Toggle Nav
+          nav.classList.toggle("nav-active");
+
+          //Animate Links
+          navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+              link.style.animation = "";
+            } else {
+              link.style.animation = `navLinkFade 0.5s ease forwards ${
+                index / 7 + 0.5
+              }s`;
+            }
+          });
+          //Burger Animation
+          burger.classList.toggle("toggle");
+        });
+      };
+
+      navSlide();
+    </script>
+    <article>
+      <h1>고객센터</h1>
+
+      <div class="paddings">
+        <div class="two_btn_wraps">
+          <button class="tabmenu-button tabmenu-color">자주 묻는 질문</button>
+          <button
+            class="tabmenu-button"
+            onclick="location.href='index.html#quiry'"
+          >
+            1:1 문의하기
+          </button>
+        </div>
+
+        <div class="content-box">
+          <div id="FAQ" class="tab">
+            <h2>FAQ</h2>
+
+            <div>
+              <div class="lefts faq_btn_wraps">
+                <button
+                  class="faqmenu-button faqlink faqmenu-color"
+                  onclick="openfaq(event,'faqAll')"
+                >
+                  전체
+                </button>
+                <button
+                  class="faqmenu-button faqlink"
+                  onclick="openfaq(event,'order')"
+                >
+                  주문/결제
+                </button>
+                <button
+                  class="faqmenu-button faqlink"
+                  onclick="openfaq(event,'shipping')"
+                >
+                  배송
+                </button>
+                <button
+                  class="faqmenu-button faqlink"
+                  onclick="openfaq(event,'refund')"
+                >
+                  취소/환불
+                </button>
+              </div>
+
+              <div class="margin-tops centers">
+                <div id="faqAll" class="faq lefts">
+                  <details>
+                    <summary>
+                      <span>[주문/결제]</span>
+                      ESP상품의 결제 방법에는 무엇이 있나요?
+                    </summary>
+                    <p>
+                      ESP와 같은 무형 상품은 신용카드로 결제 가능하며, 가상계좌
+                      결제는 사용하실 수 없습니다.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      <span>[주문/결제]</span>
+                      가상계좌 이용 시 입금 확인은 어떻게 하나요?
+                    </summary>
+                    <p>
+                      주문 접수 시 주문 완료 메일과 SMS(주문자 핸드폰번호)를
+                      통해 계좌번호를 보내 드리오니 해당 계좌로 입금해주시기
+                      바랍니다.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      <span>[배송]</span> 배송 일정 및 배송 현황 조회는 어디서
+                      하나요?
+                    </summary>
+                    <p>
+                      고객님께서 주문해주신 상품은 입금확인 후 발송 준비되며,
+                      지역에 따라 3~7일 이내 전국 어디든 배송 가능합니다.<br />
+
+                      비회원의 예약판매 상품 등 일부 상품에 대해서는 상품 수급
+                      사정에 의해 배송이 지연될 수 있습니다.<br />
+
+                      주문상품에 대한 상세한 확인 및 배송상황은
+                      <strong style="color: #5865f5">'마이 페이지'</strong>에서
+                      모두 확인하실 수 있습니다.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[주문/결제]</span>
+                      결제방법에는 무엇이 있나요?
+                    </summary>
+                    <p>
+                      가상계좌, 신용카드로 결제 가능하며, 쿠폰 및 마일리지를
+                      보유하신 경우에는 동시에 사용하실 수 있습니다.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[취소/환불]</span> 주문취소 및 반품 신청은 어떻게
+                      하나요?
+                    </summary>
+                    <p>
+                      주문취소 및 반품신청은 e-mail 및 고객지원센터로 요청하실
+                      수 있습니다. (e-mail : cshelp@sony.co.kr / 전화 :
+                      1588-0911)
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[배송]</span> 배송료 부담은 누가하나요?
+                    </summary>
+                    <p>
+                      소니스토어는 무료 배송을 원칙으로 하고 있습니다. 다만 산간
+                      도서지방의 경우는 상품 특성에 따라 배송료를 부담하실 수도
+                      있습니다.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[배송]</span> 비회원 주문 시 주문 배송 조회는 어디서
+                      하나요?
+                    </summary>
+                    <p>
+                      비회원 주문 시 페이지 우측 상단의 <주문/배송조회>을
+                      클릭하신 후 주문번호 및 비밀번호(주문 시 입력하신
+                      비밀번호) 를 입력하시면 됩니다.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[주문/결제]</span>
+                      대량 구매 문의는 어디로 해야 하나요?
+                    </summary>
+                    <p>
+                      B2B 기업체 특판 구매는
+                      <strong style="color: #5865f5"
+                        >1)모델 2)수량 3)납기일 4)납품처 5)제품 용도</strong
+                      >
+                      의 정보가 필요합니다. 위의 정보를 포함한 메일을 송부 부탁
+                      드립니다.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      <span>[취소/환불]</span> 가상 계좌 주문건의 경우, 환불은
+                      어떻게 처리되나요?
+                    </summary>
+                    <p>
+                      가상 계좌 주문 취소 및 환불 요청은 “소니 온라인 스토어 ->
+                      마이페이지 -> 주문/배송” 내역에서 취소신청이 가능합니다.
+                      고객지원 센터를 통해서 취소하시는 경우에는, 입금자 확인을
+                      위해 고객센터 통화 후 입금한 통장의 사본을 보내주셔야
+                      합니다. 환불 금액은 신청하신 날로부터 3영업일 이내에
+                      완료됩니다.
+                    </p>
+                  </details>
+                </div>
+
+                <div id="order" class="faq lefts" style="display: none">
+                  <details>
+                    <summary>
+                      <span>[주문/결제]</span> ESP상품의 결제 방법에는 무엇이
+                      있나요?
+                    </summary>
+                    <p>
+                      ESP와 같은 무형 상품은 신용카드로 결제 가능하며, 가상계좌
+                      결제는 사용하실 수 없습니다.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[주문/결제]</span> 대량 구매 문의는 어디로 해야
+                      하나요?
+                    </summary>
+                    <p>
+                      B2B 기업체 특판 구매는
+                      <strong style="color: #5865f5"
+                        >1)모델 2)수량 3)납기일 4)납품처 5)제품 용도</strong
+                      >
+                      의 정보가 필요합니다. 위의 정보를 포함한 메일을 송부 부탁
+                      드립니다.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[주문/결제]</span> 결제방법에는 무엇이 있나요?
+                    </summary>
+                    <p>
+                      가상계좌, 신용카드로 결제 가능하며, 쿠폰 및 마일리지를
+                      보유하신 경우에는 동시에 사용하실 수 있습니다.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[주문/결제]</span> 가상계좌 이용 시 입금 확인은
+                      어떻게 하나요?
+                    </summary>
+                    <p>
+                      주문 접수 시 주문 완료 메일과 SMS(주문자 핸드폰번호)를
+                      통해 계좌번호를 보내 드리오니 해당 계좌로 입금해주시기
+                      바랍니다.
+                    </p>
+                  </details>
+                </div>
+
+                <div id="shipping" class="faq lefts" style="display: none">
+                  <details>
+                    <summary>
+                      <span>[배송]</span> 배송 일정 및 배송 현황 조회는 어디서
+                      하나요?
+                    </summary>
+                    <p>
+                      고객님께서 주문해주신 상품은 입금확인 후 발송 준비되며,
+                      지역에 따라 3~7일 이내 전국 어디든 배송 가능합니다.<br />
+
+                      비회원의 예약판매 상품 등 일부 상품에 대해서는 상품 수급
+                      사정에 의해 배송이 지연될 수 있습니다.<br />
+
+                      주문상품에 대한 상세한 확인 및 배송상황은
+                      <strong style="color: #5865f5">'마이 페이지'</strong>에서
+                      모두 확인하실 수 있습니다.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[배송]</span> 배송료 부담은 누가하나요?
+                    </summary>
+                    <p>
+                      소니스토어는 무료 배송을 원칙으로 하고 있습니다. 다만 산간
+                      도서지방의 경우는 상품 특성에 따라 배송료를 부담하실 수도
+                      있습니다.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[배송]</span> 비회원 주문 시 주문 배송 조회는 어디서
+                      하나요?
+                    </summary>
+                    <p>
+                      비회원 주문 시 페이지 우측 상단의 <주문/배송조회>을
+                      클릭하신 후 주문번호 및 비밀번호(주문 시 입력하신
+                      비밀번호) 를 입력하시면 됩니다.
+                    </p>
+                  </details>
+                </div>
+                <div id="refund" class="faq lefts" style="display: none">
+                  <details>
+                    <summary>
+                      <span>[취소/환불]</span> 주문취소 및 반품 신청은 어떻게
+                      하나요?
+                    </summary>
+                    <p>
+                      주문취소 및 반품신청은 e-mail 및 고객지원센터로 요청하실
+                      수 있습니다. (e-mail : cshelp@sony.co.kr / 전화 :
+                      1588-0911)
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      <span>[취소/환불]</span> 가상 계좌 주문건의 경우, 환불은
+                      어떻게 처리되나요?
+                    </summary>
+                    <p>
+                      가상 계좌 주문 취소 및 환불 요청은 “소니 온라인 스토어 ->
+                      마이페이지 -> 주문/배송” 내역에서 취소신청이 가능합니다.
+                      고객지원 센터를 통해서 취소하시는 경우에는, 입금자 확인을
+                      위해 고객센터 통화 후 입금한 통장의 사본을 보내주셔야
+                      합니다. 환불 금액은 신청하신 날로부터 3영업일 이내에
+                      완료됩니다.
+                    </p>
+                  </details>
+                </div>
+              </div>
+            </div>
+            <script>
+              function openfaq(evt, faqName) {
+                var i, x, faqlinks;
+                x = document.getElementsByClassName("faq");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                faqlinks = document.getElementsByClassName("faqlink");
+                for (i = 0; i < x.length; i++) {
+                  faqlinks[i].className = faqlinks[i].className.replace(
+                    " faqmenu-color",
+                    ""
+                  );
+                }
+                document.getElementById(faqName).style.display = "block";
+                evt.currentTarget.className += " faqmenu-color";
+              }
+            </script>
+          </div>
+
+          <div id="QNA" class="tab" style="display: none">
+            <button onclick="location.href='purchase.html'"></button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <footer id="footer">
+      <div class="align-centers">
+        <!--logo area-->
+        <div><img class="none" src="images/footer_sony.svg" /></div>
+        <!--text area-->
+        <div style="border-top: 1px solid #ccc">
+          <div class="text-area paddings">
+            <ul class="footer01">
+              <li class="list_tit">고객지원</li>
+              <ul>
+                <div>
+                  <li><span>소니코리아 고객지원</span></li>
+                  <li><span>소니스토어 고객지원</span></li>
+                  <li><span>프로페셔널 제품 지원 및 서비스</span></li>
+                  <li><span>소니 대외사업부</span></li>
+                  <li><span>매장찾기</span></li>
+                  <li><span>직영점 안내</span></li>
+                </div>
+              </ul>
+              <li class="list_tit">제품정보</li>
+              <ul>
+                <div>
+                  <li><span>소비자 가전</span></li>
+                  <li><span>프로페셔널 제품 및 솔루션</span></li>
+                  <li><span>전자부품</span></li>
+                </div>
+              </ul>
+              <li class="list_tit">뉴스 및 정보</li>
+              <ul>
+                <div>
+                  <li><span>뉴스/보도자료</span></li>
+                  <li><span>Investor Relations</span></li>
+                </div>
+              </ul>
+            </ul>
+            <script>
+              // 메뉴 링크 열기
+              window.addEventListener("load", function () {
+                const List = document.querySelectorAll(".footer01 > li");
+                for (let i = 0; i < List.length; i++) {
+                  List[i].addEventListener("click", function () {
+                    const panel = this.nextElementSibling;
+                    if (panel.classList.contains("active")) {
+                      panel.classList.remove("active");
+                      this.classList.remove("active");
+                      panel.style.maxHeight = null;
+                    } else {
+                      clearlist();
+                      panel.classList.add("active");
+                      this.classList.add("active");
+                      panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                  });
+                }
+
+                function clearlist() {
+                  for (let i = 0; i < List.length; i++) {
+                    const panel = List[i].nextElementSibling;
+                    panel.classList.remove("active");
+                    List[i].classList.remove("active");
+                    panel.style.maxHeight = null;
+                  }
+                }
+              });
+            </script>
+            <ul class="footer01_pc none">
+              <div class="flexs">
+                <li>
+                  <span class="bolds">고객지원</span>
+                  <ul>
+                    <li><span>소니코리아 고객지원</span></li>
+                    <li><span>소니스토어 고객지원</span></li>
+                    <li><span>프로페셔널 제품 지원 및 서비스</span></li>
+                    <li><span>소니 대외사업부</span></li>
+                    <li><span>매장찾기</span></li>
+                    <li><span>직영점 안내</span></li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="bolds">제품정보</span>
+                  <ul>
+                    <li><span>소비자 가전</span></li>
+                    <li><span>프로페셔널 제품 및 솔루션</span></li>
+                    <li><span>전자부품</span></li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="bolds">뉴스 및 정보</span>
+                  <ul>
+                    <li><span>뉴스/보도자료</span></li>
+                    <li><span>Investor Relations</span></li>
+                  </ul>
+                </li>
+              </div>
+              <hr />
+            </ul>
+            <ul class="footer02 space-betweens">
+              <li class="bolds">개인정보처리방침</li>
+              <li>이용약관</li>
+              <li class="none">사이트맵</li>
+              <li class="none">회사소개</li>
+              <li>환경경영</li>
+              <li class="none">사회공헌</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--subsidiary area-->
+    <address>
+      <div>
+        <div class="address01 paddings space-betweens align-centers">
+          <div>
+            <img title="SONY GROUP" src="images/address_sonygroup.png" />
+          </div>
+          <div>
+            <img title="PLAYSTATION" src="images/address_playstation.png" />
+          </div>
+          <div>
+            <img title="SONY MUSIC" src="images/address_sonymusic.png" />
+          </div>
+        </div>
+
+        <div class="address02 paddings space-betweens align-centers">
+          <div>
+            <img title="SONY PICTURES" src="images/address_pictures.png" />
+          </div>
+          <div>
+            <img title="SONY ENT" src="images/address_sonyent.png" />
+          </div>
+          <div>
+            <img title="ANIPLEX" src="images/address_aniplex.png" />
+          </div>
+        </div>
+      </div>
+    </address>
+  </body>
+</html>

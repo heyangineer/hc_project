@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=3.0"
+    />
+    <title>SONY</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="images/head_favicon.webp"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/register.css" />
+
+    <!--jquery-->
+    <style type="text/css"></style>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.js"
+    ></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!--swiper-->
+    <!--비교적 쉬움 구글링 하면 디자인 수정법도 적혀있음 확인할 것-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style media="screen"></style>
+  </head>
+  <body>
+    <nav id="home" class="space-betweens align-centers paddings">
+      <h1 class="logo">
+        <a href="/index.html"><img alt="sony" src="images/nav_logo.png" /></a>
+      </h1>
+      <ul class="nav-links">
+        <li><a href="/index.html">홈으로</a></li>
+        <li><a href="/register.html">회원가입</a></li>
+        <li><a href="/login.html">로그인</a></li>
+        <li><a href="/remove.html" style="color: #5865f5">회원탈퇴</a></li>
+        <li><a href="/wishlist.html">장바구니</a></li>
+        <li><a href="/purchase_linkbudss.html">구매페이지</a></li>
+        <li><a href="/faq.html">고객센터</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <script>
+      const navSlide = () => {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-links");
+        const navLinks = document.querySelectorAll(".nav-links li");
+
+        burger.addEventListener("click", () => {
+          // Toggle Nav
+          nav.classList.toggle("nav-active");
+
+          //Animate Links
+          navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+              link.style.animation = "";
+            } else {
+              link.style.animation = `navLinkFade 0.5s ease forwards ${
+                index / 7 + 0.5
+              }s`;
+            }
+          });
+          //Burger Animation
+          burger.classList.toggle("toggle");
+        });
+      };
+
+      navSlide();
+    </script>
+    <article class="removeAccount">
+      <h1 class="centers">회원탈퇴</h1>
+      <h2 class="centers">
+        소니스토어를 <strong class="red-ft">탈퇴</strong>하시나요?
+      </h2>
+      <h4 class="centers gray-ft">탈퇴하시는 이유를 알려주세요.</h4>
+      <div class="content-box">
+        <fieldset>
+          <label>
+            <input type="radio" name="remove" value="not_use" checked />
+            <span>자주 사용하지 않아요.</span>
+          </label>
+          <div></div>
+          <label>
+            <input type="radio" name="remove" value="expensive" />
+            <span>가격이 비싸요.</span>
+          </label>
+          <div></div>
+          <label>
+            <input type="radio" name="remove" value="uncomfortable" />
+            <span>UI/UX가 사용하기 불편해요. </span>
+          </label>
+          <div></div>
+          <label>
+            <input type="radio" name="remove" value="service" />
+            <span>서비스가 별로에요.</span>
+          </label>
+          <div></div>
+          <label>
+            <input type="radio" name="remove" value="privacy" />
+            <span>개인정보 유출이 걱정돼요.</span>
+          </label>
+          <div></div>
+          <label>
+            <input type="radio" name="remove" value="not_found" />
+            <span>찾는 상품이 없어요.</span>
+          </label>
+        </fieldset>
+      </div>
+    </article>
+    <article class="confirm">
+      <h4 class="centers gray-ft">
+        탈퇴하기 전에 아래 내용을 꼭 확인해 주세요.
+      </h4>
+      <div class="content-box">
+        <ol>
+          <li>
+            탈퇴하시면 고객님의 모든 콘텐츠와 활동 내역, 포인트, 쿠폰이
+            삭제되며, 삭제된 정보는 복구가 불가능합니다.
+          </li>
+          <li>
+            전자상거래법에 의해 보존해야 하는 거래기록은 5년간 보관됩니다.
+          </li>
+          <li>회원탈퇴 후 3개월 동안 재가입이 불가능 합니다.</li>
+        </ol>
+        <div class="formBox">
+          <div class="flexs align-centers">
+            <div class="checkBox">
+              <input type="checkbox" id="agreeCheck" />
+              <label for="agreeCheck"></label>
+            </div>
+            <p>안내사항을 모두 확인하였으며, 이에 동의합니다.</p>
+          </div>
+        </div>
+        <hr />
+        <div class="flexs">
+          <button
+            onclick="location.href='index.html'"
+            class="white-btn"
+            style="margin-right: 10px"
+          >
+            취소
+          </button>
+          <button class="black-btn" onclick="check1()" value="confirm">
+            탈퇴하기
+          </button>
+        </div>
+        <script>
+          function check1() {
+            var chk1 = document.getElementById("agreeCheck").checked;
+            if (!chk1) {
+              alert("동의 확인 버튼을 눌러주세요.");
+              return false;
+            } else {
+              alert("회원 탈퇴가 완료되었습니다.");
+              location.href = "index.html";
+            }
+            frm.submit();
+          }
+        </script>
+      </div>
+    </article>
+    <footer id="footer">
+      <div class="align-centers">
+        <!--logo area-->
+        <div><img class="none" src="images/footer_sony.svg" /></div>
+        <!--text area-->
+        <div style="border-top: 1px solid #ccc">
+          <div class="text-area paddings">
+            <ul class="footer01">
+              <li class="list_tit">고객지원</li>
+              <ul>
+                <div>
+                  <li><span>소니코리아 고객지원</span></li>
+                  <li><span>소니스토어 고객지원</span></li>
+                  <li><span>프로페셔널 제품 지원 및 서비스</span></li>
+                  <li><span>소니 대외사업부</span></li>
+                  <li><span>매장찾기</span></li>
+                  <li><span>직영점 안내</span></li>
+                </div>
+              </ul>
+              <li class="list_tit">제품정보</li>
+              <ul>
+                <div>
+                  <li><span>소비자 가전</span></li>
+                  <li><span>프로페셔널 제품 및 솔루션</span></li>
+                  <li><span>전자부품</span></li>
+                </div>
+              </ul>
+              <li class="list_tit">뉴스 및 정보</li>
+              <ul>
+                <div>
+                  <li><span>뉴스/보도자료</span></li>
+                  <li><span>Investor Relations</span></li>
+                </div>
+              </ul>
+            </ul>
+            <script>
+              // 메뉴 링크 열기
+              window.addEventListener("load", function () {
+                const List = document.querySelectorAll(".footer01 > li");
+                for (let i = 0; i < List.length; i++) {
+                  List[i].addEventListener("click", function () {
+                    const panel = this.nextElementSibling;
+                    if (panel.classList.contains("active")) {
+                      panel.classList.remove("active");
+                      this.classList.remove("active");
+                      panel.style.maxHeight = null;
+                    } else {
+                      clearlist();
+                      panel.classList.add("active");
+                      this.classList.add("active");
+                      panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                  });
+                }
+
+                function clearlist() {
+                  for (let i = 0; i < List.length; i++) {
+                    const panel = List[i].nextElementSibling;
+                    panel.classList.remove("active");
+                    List[i].classList.remove("active");
+                    panel.style.maxHeight = null;
+                  }
+                }
+              });
+            </script>
+            <ul class="footer01_pc none">
+              <div class="flexs">
+                <li>
+                  <span class="bolds">고객지원</span>
+                  <ul>
+                    <li><span>소니코리아 고객지원</span></li>
+                    <li><span>소니스토어 고객지원</span></li>
+                    <li><span>프로페셔널 제품 지원 및 서비스</span></li>
+                    <li><span>소니 대외사업부</span></li>
+                    <li><span>매장찾기</span></li>
+                    <li><span>직영점 안내</span></li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="bolds">제품정보</span>
+                  <ul>
+                    <li><span>소비자 가전</span></li>
+                    <li><span>프로페셔널 제품 및 솔루션</span></li>
+                    <li><span>전자부품</span></li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="bolds">뉴스 및 정보</span>
+                  <ul>
+                    <li><span>뉴스/보도자료</span></li>
+                    <li><span>Investor Relations</span></li>
+                  </ul>
+                </li>
+              </div>
+              <hr />
+            </ul>
+            <ul class="footer02 space-betweens">
+              <li class="bolds">개인정보처리방침</li>
+              <li>이용약관</li>
+              <li class="none">사이트맵</li>
+              <li class="none">회사소개</li>
+              <li>환경경영</li>
+              <li class="none">사회공헌</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--subsidiary area-->
+    <address>
+      <div>
+        <div class="address01 paddings space-betweens align-centers">
+          <div>
+            <img title="SONY GROUP" src="images/address_sonygroup.png" />
+          </div>
+          <div>
+            <img title="PLAYSTATION" src="images/address_playstation.png" />
+          </div>
+          <div>
+            <img title="SONY MUSIC" src="images/address_sonymusic.png" />
+          </div>
+        </div>
+
+        <div class="address02 paddings space-betweens align-centers">
+          <div>
+            <img title="SONY PICTURES" src="images/address_pictures.png" />
+          </div>
+          <div>
+            <img title="SONY ENT" src="images/address_sonyent.png" />
+          </div>
+          <div>
+            <img title="ANIPLEX" src="images/address_aniplex.png" />
+          </div>
+        </div>
+      </div>
+    </address>
+  </body>
+</html>

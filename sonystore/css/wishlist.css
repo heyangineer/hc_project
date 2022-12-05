@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+main {
+  padding-top: 100px;
+}
+main .icon_img {
+  width: 200px;
+  margin: 30px auto;
+}
+main .icon_img img {
+  width: 50px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e2e2e2;
+  position: relative;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+input[id="allselect"]:checked + label::after,
+input[id="selectProd"]:checked + label::after,
+input[id="selectProd2"]:checked + label::after,
+input[id="selectProd3"]:checked + label::after {
+  content: "✔";
+  font-size: 1.5rem;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5865f5;
+}
+main .content-box .prodDetail h3,
+main .content-box .prodDetail .flexs {
+  margin: 15px 0;
+}
+
+main .content-box .prodDetail input {
+  border-radius: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 0;
+}
+main .content-box .prodDetail #prodCount {
+  border-left: 0;
+  border-right: 0;
+}
+main .content-box .prodImg {
+  width: 150px;
+  background: #f3f3f3;
+}
+main .content-box button {
+  margin-top: 30px;
+}
+main .content-box .white-btn {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-right: 30px;
+}
+main .content-box .black-btn {
+  cursor: not-allowed;
+}
+main .totalPrice {
+  width: 100%;
+  color: #5865f5;
+  font-size: 1.7rem;
+  border: 0;
+  font-weight: bolder;
+  margin-right: 5px;
+}
+
+/* ......../ media query /.......... */
+
+/* Desktop Device */
+
+@media (min-width: 1366px) {
+  .content-box {
+    width: 600px;
+    margin: 70px auto;
+  }
+}
